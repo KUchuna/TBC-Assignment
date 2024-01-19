@@ -1,0 +1,131 @@
+@import url('https://fonts.cdnfonts.com/css/helvetica-neue-5');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Helvetica neue';
+}
+
+/* Start of header styles */
+
+.header-container {
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    height: 84px;
+    color: white;
+    background-color: rgba(26, 30, 31);
+    position: sticky;
+    top: 0;
+    transition: background-color 0.3s ease;
+}
+
+.header-items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 980px;
+    width: 100%;
+}
+
+.header-items img {
+    width: 182px;
+    height: 42px;
+}
+
+.header-list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    padding-block: 20px;
+    gap: 45px;
+    font-weight: 300;
+}
+
+.header-list-item {
+    cursor: pointer;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.header-list-item:hover {
+    color: rgb(0 163 224);
+}
+
+.header-list-item:nth-child(3) {
+    color: rgb(0 163 224);
+}
+
+.toggle-opacity {
+    background-color: rgba(34, 34, 34, 0.95);
+}
+
+/* end of header styles */
+
+
+/*start of main styles */
+
+.main-title-container {
+    background-image: url('/assets/mainPhoto.webp');
+    padding: 96px 140px;
+    font-size: 42px;
+    color: white;
+    height: 352px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-title-container h5 {
+    margin-bottom: 10px;
+    font-size: 44px;
+}
+
+.main-title-container h6 {
+    font-size: 34px;
+}
+
+.main-title-container h5, .main-title-container h6{
+    max-width: 980px;
+    width: 100%;
+    text-align: left;
+    font-weight: 900;
+    line-height: 1.6em;
+}
+
+.main-description-container {
+    background-color: rgb(43, 43, 43);
+    padding: 50px 0;
+    color: white;
+    font-size: 30px;
+    line-height: 1.6em;
+    font-weight: 300;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.main-description-text {
+    max-width: 980px;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.main-learn-more {
+    color: rgb(0 163 224);
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.main-learn-more:hover {
+    color: grey;
+}
+
+/*end of main styles */
