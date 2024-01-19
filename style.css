@@ -67,7 +67,7 @@
 /*start of main styles */
 
 .main-title-container {
-    background-image: url('./assets/mainPhoto.png');
+    background-image: url('mainPhoto.png');
     padding: 96px 140px;
     font-size: 42px;
     color: white;
