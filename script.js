@@ -1,4 +1,3 @@
-
 const header = document.getElementById('header')
 
 let scrollPoisiton = window.scrollY
@@ -14,4 +13,3 @@ window.addEventListener('scroll', () => {
     }
     console.log(scrollPoisiton)
 })
-
