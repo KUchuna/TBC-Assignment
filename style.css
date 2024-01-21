@@ -82,15 +82,23 @@ stay centered and do not exceed certain width */
 /*start of main styles */
 
 .main-title-container {
-    background: url("./assets/mainPhoto.png");
+    background: url("https://static.wixstatic.com/media/93e8a3_9fa23196ddf6427a9da574e2b31a13d2~mv2.jpg/v1/fill/w_1471,h_352,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/93e8a3_9fa23196ddf6427a9da574e2b31a13d2~mv2.jpg");
     padding: 96px 140px;
     font-size: 42px;
     color: white;
     height: 352px;
     background-repeat: no-repeat;
-    background-size: 100.5%;
+    background-size: cover;
     background-position: center;
     font-weight: bold;
+}
+
+/* make image position better on wider screens */
+
+@media (min-width: 1500px) {
+    .main-title-container {
+        background-position: 100% 45%;
+    }
 }
 
 .main-title-container h5 {
@@ -149,6 +157,7 @@ stay centered and do not exceed certain width */
     grid-template-columns: 1fr 1fr 1fr;
     gap: 40px;
     row-gap: 23px;
+    max-width: 980px;
 }
 
 .card-container {
@@ -185,6 +194,7 @@ stay centered and do not exceed certain width */
     align-items: center;
     color: #00AEEF;
     cursor: pointer;
+    width: fit-content;
     transition: color 0.3s ease;
 }
 
@@ -198,3 +208,78 @@ stay centered and do not exceed certain width */
 
 /* end of courses styles */
 /* end of course cards styles */
+
+/* start of sponsors styles */
+
+.sponsors-container {
+    background-color: #2B2B2B;
+    padding: 36px;
+    position: relative;
+    min-height: 363px;
+    align-items: center;
+}
+
+.sponsors-title {
+    color: white;
+    font-size: 24px;
+}
+
+.sponsor-page {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    margin-top: 66px;
+    padding-top: 70px;
+    justify-content: space-between;
+    transition: opacity 1s ease-in-out;
+}
+
+#second-page {
+    opacity: 0;
+}
+
+#third-page{
+    justify-content: center;
+    opacity: 0;
+}
+
+.arrows-container {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 55%;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+#prev-arrow {
+    margin-left: 100px;
+}
+
+#next-arrow {
+    margin-right: 100px;
+}
+
+.arrow-svg:hover path {
+    stroke: grey;
+}
+
+.arrow-svg:hover {
+    cursor: pointer;
+}
+
+.dots-container {
+    position: absolute;
+    top: 75%;
+    color: white;
+    user-select: none;
+}
+
+.dots-container span {
+    padding: 3px;
+    cursor: pointer;
+    font-size: 24px;
+}
