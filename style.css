@@ -33,6 +33,7 @@ stay centered and do not exceed certain width */
     position: sticky;
     top: 0;
     transition: background-color 0.3s ease;
+    z-index: 10000;
 }
 
 .header-items {
@@ -292,3 +293,19 @@ stay centered and do not exceed certain width */
     background-color: #161616;
     color: white;
 }
+
+.faq-questions-list {
+    list-style: none;
+}
+
+.question {
+    cursor: pointer;
+    user-select: none;
+}
+
+.answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease;
+}
+

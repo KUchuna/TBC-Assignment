@@ -94,3 +94,28 @@ document.addEventListener('DOMContentLoaded', function () {
     startTimer();
     showPage(currentPage);
 })
+
+document.addEventListener("DOMContentLoaded", function() {
+    const questions = document.querySelectorAll(".question");
+
+    questions.forEach(question => {
+        question.addEventListener("click", function() {
+            const answer = this.nextElementSibling;
+
+            // close all other answers
+            questions.forEach(otherQuestion => {
+                if (otherQuestion !== question) {
+                    const otherAnswer = otherQuestion.nextElementSibling;
+                    otherAnswer.style.maxHeight = "0";
+                }
+            });
+
+            // toggle the clicked answer
+            if (answer.style.maxHeight === "0px" || answer.style.maxHeight === "") {
+                answer.style.maxHeight = answer.scrollHeight + "px";
+            } else {
+                answer.style.maxHeight = "0";
+            }
+        });
+    });
+});
