@@ -117,16 +117,12 @@ document.addEventListener("DOMContentLoaded", function() {
             // toggle the clicked answer
             if (answer.style.maxHeight === "0px" || answer.style.maxHeight === "") {
                 answer.style.maxHeight = answer.scrollHeight + 26 + "px";
-                answer.style.borderBottom = "1px solid rgb(66, 65, 65)";
                 answer.style.paddingBottom = "26px";
                 questionArrow.src = "./assets/upArrow.svg";
-                this.style.borderBottom = "none";
             } else {
                 answer.style.maxHeight = "0";
                 answer.style.paddingBottom = "0";
-                answer.style.borderBottom = "none";
                 questionArrow.src = "./assets/downArrow.svg";
-                this.style.borderBottom = "1px solid rgb(66, 65, 65)";
             }
         });
     });

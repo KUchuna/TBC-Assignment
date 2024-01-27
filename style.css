@@ -7,6 +7,17 @@
     font-family: "TBC X", "arial";
 }
 
+body {
+    overflow-x: hidden;
+}
+.desktop {
+    display: initial;
+}
+
+.mobile {
+    display: none;
+}
+
 /* give child and parent elements style so they 
 stay centered and do not exceed certain width */
 
@@ -96,14 +107,6 @@ stay centered and do not exceed certain width */
     font-weight: bold;
 }
 
-/* make image position better on wider screens */
-
-@media (min-width: 1500px) {
-    .main-title-container {
-        background-position: 100% 45%;
-    }
-}
-
 .main-title-container h5 {
     margin-bottom: 15px;
     font-size: 42px;
@@ -157,10 +160,9 @@ stay centered and do not exceed certain width */
 
 .courses-cards-container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 40px;
+    grid-template-columns: minmax(200px, 1fr) minmax(200px, 1fr) minmax(200px, 1fr);
+    column-gap: 40px;
     row-gap: 23px;
-    max-width: 980px;
 }
 
 .card-container {
@@ -182,17 +184,17 @@ stay centered and do not exceed certain width */
     border-top-right-radius: 5px;
 }
 
-.card-title {
+.card-course-title {
     font-size: 17px;
     margin-bottom: 28px;
 }
 
-.card-state {
+.card-course-state {
     margin-bottom: 105px;
     font-size: 13px;
 }
 
-.card-details {
+.card-course-details {
     display: flex;
     align-items: center;
     color: #00AEEF;
@@ -327,7 +329,6 @@ stay centered and do not exceed certain width */
     user-select: none;
     padding-top: 26px;
     padding-bottom: 26px;
-    border-bottom: 1px solid rgb(66, 65, 65);
     font-size: 18px;
     display: flex;
     align-items: center;
@@ -340,7 +341,8 @@ stay centered and do not exceed certain width */
 .answer {
     max-height: 0;
     overflow: hidden;
-    transition: all 0.2s ease;
+    border-bottom: 1px solid rgb(66, 65, 65);
+    transition: max-height 0.2s ease;
 }
 
 /* end of FAQ styles */
@@ -369,4 +371,146 @@ stay centered and do not exceed certain width */
     align-items: flex-start;
     justify-content: space-between;
     height: 100%;
+}
+
+.footer-left-text {
+    color: #F4F4F4;
+    font-size: 14px;
+    line-height: 22px; 
+}
+
+.footer-right-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-direction: column;
+    height: 100%;
+}
+
+.footer-socials-container img:nth-child(2) {
+    margin-left: 10px;
+}
+
+.footer-subscribe-button {
+    border: none;
+    border-radius: 6px;
+    background-color: #00AEF3;
+    cursor: pointer;
+    color: #FFF;
+    font-size: 16px;
+    font-style: normal;
+    line-height: 25.6px;
+    padding: 7px 31px;
+    transition: all 0.3s ease;
+}
+
+.footer-subscribe-button:hover {
+    background-color: #999494;
+    color: white;
+}
+
+/* end of footer styles */
+
+/* start of media quaries */
+
+/* make main image position better on wider screens */
+
+@media (min-width: 1500px) {
+    .main-title-container {
+        background-position: 100% 45%;
+    }
+}
+
+
+@media (max-width: 1024px) {
+    .courses-cards-container {
+        column-gap: 20px;
+    }
+}
+
+@media (max-width: 700px) {
+    .desktop {
+        display: none;
+    }
+    .mobile {
+        display: initial;
+    }
+    .header-items img {
+        margin-left: 25px;
+    }
+    .main-title-container {
+        padding: 80px 25px 0;
+    }
+    .main-description-container {
+        padding: 30px 25px;
+    }
+    .main-learn-more {
+        font-size: 25px;
+    }
+    .courses-title {
+        font-size: 35px;
+        padding-left: 25px;
+        margin-bottom: 30px;
+    }
+    .courses-cards-container {
+        display: flex;
+        flex-direction: column;
+        padding: 0 25px;
+    }
+    .card-container {
+        height: fit-content;
+    }
+    .card-contents-container {
+        height: 100%;
+    }
+    .card-image {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .card-course-title {
+        margin-bottom: 15px;
+    }
+    .card-course-state {
+        margin-bottom: 15px;
+    }
+    .card-course-details img {
+        margin-right: 10px;
+    }
+    .sponsors-container {
+        padding: 20px 25px;
+        height: 430px;
+    }
+    .sponsors-title {
+        font-size: 20px;
+    }
+    .arrows-container {
+        display: none;
+    }
+    .dots-container {
+        margin-top: 70px;
+    }
+    .sponsor-page {
+        top: 60%;
+        margin: 0;
+        transform: translate(-50%, -50%);
+        flex-direction: column;
+        padding: 0;
+        justify-content: space-between;
+    }
+    .sponsor-page img {
+        max-height: 65px;
+        margin-bottom: 30px;
+    }
+    .faq-container {
+        padding: 60px 25px;
+    }
+    .all-questions {
+        margin-top: 60px;
+    }
+    .footer-container {
+        padding: 30px 25px;
+    }
+    .footer-content-width-adjust {
+        padding: 0;
+    }
 }
