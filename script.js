@@ -97,24 +97,36 @@ document.addEventListener('DOMContentLoaded', function () {
 
 document.addEventListener("DOMContentLoaded", function() {
     const questions = document.querySelectorAll(".question");
+    const questionArrows = document.querySelectorAll(".question-arrow")
 
-    questions.forEach(question => {
+    questions.forEach((question, index) => {
         question.addEventListener("click", function() {
             const answer = this.nextElementSibling;
+            const questionArrow = questionArrows[index];
 
             // close all other answers
-            questions.forEach(otherQuestion => {
+            questions.forEach((otherQuestion, otherIndex) => {
                 if (otherQuestion !== question) {
                     const otherAnswer = otherQuestion.nextElementSibling;
                     otherAnswer.style.maxHeight = "0";
+                    otherAnswer.style.paddingBottom = "0";
+                    questionArrows[otherIndex].src = "./assets/downArrow.svg";
                 }
             });
 
             // toggle the clicked answer
             if (answer.style.maxHeight === "0px" || answer.style.maxHeight === "") {
-                answer.style.maxHeight = answer.scrollHeight + "px";
+                answer.style.maxHeight = answer.scrollHeight + 26 + "px";
+                answer.style.borderBottom = "1px solid rgb(66, 65, 65)";
+                answer.style.paddingBottom = "26px";
+                questionArrow.src = "./assets/upArrow.svg";
+                this.style.borderBottom = "none";
             } else {
                 answer.style.maxHeight = "0";
+                answer.style.paddingBottom = "0";
+                answer.style.borderBottom = "none";
+                questionArrow.src = "./assets/downArrow.svg";
+                this.style.borderBottom = "1px solid rgb(66, 65, 65)";
             }
         });
     });
