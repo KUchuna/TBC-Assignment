@@ -421,14 +421,24 @@ stay centered and do not exceed certain width */
     }
 }
 
+/* makes courses grid fit better on smaller screens*/
 
 @media (max-width: 1024px) {
     .courses-cards-container {
-        column-gap: 20px;
+        column-gap: 15px;
     }
 }
 
-@media (max-width: 700px) {
+/* this is so that arrows dont overlap with sponsors logos*/
+/* this bug is in original website too, if window is shrunk, arrows overlap with sponsors logos*/
+
+@media (max-width: 1250px) {
+    .arrows-container {
+        display: none;
+    }
+}
+
+@media (max-width: 750px) {
     .desktop {
         display: none;
     }
@@ -443,6 +453,9 @@ stay centered and do not exceed certain width */
     }
     .main-description-container {
         padding: 30px 25px;
+    }
+    .main-description-text {
+        font-size: 22px;
     }
     .main-learn-more {
         font-size: 25px;
