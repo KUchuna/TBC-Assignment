@@ -505,12 +505,12 @@ stay centered and do not exceed certain width */
         left: 0;
         width: 100vw;
         height: 100vh;
-        z-index: 100;
         display: none;
         transition: background 0.5s ease;
     }
     .overlay-active {
-        display: initial;
+        z-index: 100;
+        display: initial !important;
         background: rgba(0, 0, 0, 0.466);
     }
     .header-list {
