@@ -7,7 +7,7 @@
     <script src="script.js" defer></script>
     <title>TBC</title>
 </head>
-<body>
+<body id="body">
     <header class="header-container" id="header">
         <div class="header-items child">
             <img src="./assets/tbcLogo.svg" style="cursor: pointer;"/>
@@ -17,7 +17,22 @@
                 <li class="header-list-item">TBC x USAID</li>
                 <li class="header-list-item">რისკები</li>
             </ul>
+            <div class="mobile-ham-container mobile" id="ham-menu">
+                <span id="ham-first"></span>
+                <span id="ham-second"></span>
+                <span id="ham-third"></span>
+            </div>
+            <div class="nav-menu-container mobile" id="nav-menu">
+                <ul class="header-list mobile" id="header-list">
+                    <li class="header-list-item">მთავარი</li>
+                    <li class="header-list-item">TBC IT</li>
+                    <li class="header-list-item">TBC x USAID</li>
+                    <li class="header-list-item">რისკები</li>
+                </ul>
+            </div>
         </div>
+        <span id="page-overlay">
+        </span>
     </header>
     <main class="main-container">
         <div class="main-title-container parent-flex-column">

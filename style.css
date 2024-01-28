@@ -46,7 +46,7 @@ stay centered and do not exceed certain width */
     position: sticky;
     top: 0;
     transition: background-color 0.3s ease;
-    z-index: 10000;
+    z-index: 100;
 }
 
 .header-items {
@@ -445,8 +445,84 @@ stay centered and do not exceed certain width */
     .mobile {
         display: initial;
     }
-    .header-items img {
-        margin-left: 25px;
+    .mobile-ham-container {
+        height: 27px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        z-index: 300;
+    }
+    .mobile-ham-container span {
+        height: 4px;
+        border-radius: 4px;
+        width: 34px;
+        background-color: rgb(211, 209, 209);
+        z-index: 300;
+        transition: all 0.3s ease-out;
+    }
+    #ham-first {
+        width: 17px;
+    }
+    #ham-third {
+        width: 17px;
+        margin-left: auto;
+    }
+    .span-first-active {
+        transform: rotate(-135deg) translateX(9px) translateY(-8px);
+        transform-origin: right;
+    }
+    .span-second-active {
+        transform: rotate(-45deg);
+    }
+    .span-third-active {
+        transform: rotate(-135deg) translateX(-9px) translateY(8px);
+        transform-origin: left;
+        margin-left: none;
+    }
+    .header-container {
+        padding: 10px 25px;
+    }
+    .nav-menu-container {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        width: 0;
+        height: 100vh;
+        background-color: #2B2B2B;
+        z-index: 200;
+        transition: width 0.3s ease-in-out;
+        display: flex;
+        justify-content: flex-end;
+        padding: 100px 0;
+    }
+    .nav-active {
+        width: 350px;
+    }
+    #page-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: 100;
+        transition: background 0.5s ease;
+    }
+    .overlay-active {
+        background: rgba(0, 0, 0, 0.466);
+    }
+    .header-list {
+        display: none;
+        margin-right: 20px;
+    }
+    .header-list-item {
+        font-size: 24px;
+        margin-bottom: 50px;
+        text-align: right;
+        min-width: max-content;
+    }
+    .list-shown {
+        display: initial;
     }
     .main-title-container {
         padding: 80px 25px 0;

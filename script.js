@@ -93,9 +93,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     startTimer();
     showPage(currentPage);
-})
 
-document.addEventListener("DOMContentLoaded", function() {
     const questions = document.querySelectorAll(".question");
     const questionArrows = document.querySelectorAll(".question-arrow")
 
@@ -126,4 +124,28 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
     });
-});
+})
+
+const hamMenu = document.getElementById("ham-menu")
+const hamFirst = document.getElementById("ham-first")
+const hamSecond = document.getElementById("ham-second")
+const hamThird = document.getElementById("ham-third")
+
+const navMenu = document.getElementById("nav-menu")
+const headerList = document.getElementById("header-list")
+
+const pageOverlay = document.getElementById("page-overlay")
+
+
+hamMenu.addEventListener('click', function () {
+    hamMenu.classList.toggle("active")
+    hamFirst.classList.toggle("span-first-active")
+    hamSecond.classList.toggle("span-second-active")
+    hamThird.classList.toggle("span-third-active")
+
+    navMenu.classList.toggle("nav-active")
+
+    pageOverlay.classList.toggle("overlay-active")
+
+    headerList.classList.toggle("list-shown")
+})
