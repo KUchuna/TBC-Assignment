@@ -2,20 +2,21 @@ const header = document.getElementById('header')
 
 let scrollPoisiton = window.scrollY
 
-//gets the current scroll position and changes opacity for header element
+// gets the current scroll position and changes opacity for header element
+
 window.addEventListener('scroll', () => {
     scrollPoisiton = window.scrollY
 
     if(scrollPoisiton > 0) {
         header.classList.add('toggle-opacity')
-    }else {
+    } else {
         header.classList.remove('toggle-opacity')
     }
 })
 
 
 
-// this portion is for sponsors page
+// this portion below is for sponsors section
 
 const prevArrow = document.getElementById('prev-arrow')
 const nextArrow = document.getElementById('next-arrow')
@@ -38,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function () {
         updateDots(index)
     }
 
-    // manually change sponsors page with arrows
+    // manually change sponsors page with arrows and dots
     
     prevArrow.addEventListener('click', function () {
         currentPage = (currentPage - 1 + pages.length) % pages.length;
@@ -64,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    //timer for the pages to change automatically
+    // timer for the pages to change automatically
 
     function startTimer() {
         timer = setInterval(function () {
@@ -77,9 +78,9 @@ document.addEventListener('DOMContentLoaded', function () {
         clearInterval(timer);
     }
 
-    //this is needed so that if user is hovering/clicking on the arrows or dots
-    //the timer will stop, so that it does not double skip the pages
-    //and then the timer starts again once the user moves mouse away
+    // this below is needed so that if user is hovering/clicking on the arrows or dots
+    // the timer will stop, so that it does not double skip the pages
+    // and then the timer starts again once the user moves mouse away
 
     prevArrow.addEventListener('mouseenter', stopTimer)
     prevArrow.addEventListener('mouseleave', startTimer)
@@ -102,7 +103,8 @@ document.addEventListener('DOMContentLoaded', function () {
             const answer = this.nextElementSibling;
             const questionArrow = questionArrows[index];
 
-            // close all other answers
+            // close all other answers which are open excluding the one which is clicked
+
             questions.forEach((otherQuestion, otherIndex) => {
                 if (otherQuestion !== question) {
                     const otherAnswer = otherQuestion.nextElementSibling;
@@ -113,6 +115,7 @@ document.addEventListener('DOMContentLoaded', function () {
             });
 
             // toggle the clicked answer
+
             if (answer.style.maxHeight === "0px" || answer.style.maxHeight === "") {
                 answer.style.maxHeight = answer.scrollHeight + 26 + "px";
                 answer.style.paddingBottom = "26px";
@@ -126,6 +129,9 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 })
 
+
+// code below is for mobile nav menu and nav button span animations
+
 const hamMenu = document.getElementById("ham-menu")
 const hamFirst = document.getElementById("ham-first")
 const hamSecond = document.getElementById("ham-second")
@@ -138,7 +144,7 @@ const pageOverlay = document.getElementById("page-overlay")
 
 
 hamMenu.addEventListener('click', function () {
-    hamMenu.classList.toggle("active")
+
     hamFirst.classList.toggle("span-first-active")
     hamSecond.classList.toggle("span-second-active")
     hamThird.classList.toggle("span-third-active")
@@ -148,4 +154,5 @@ hamMenu.addEventListener('click', function () {
     pageOverlay.classList.toggle("overlay-active")
 
     headerList.classList.toggle("list-shown")
+
 })

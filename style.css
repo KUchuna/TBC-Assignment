@@ -430,14 +430,16 @@ stay centered and do not exceed certain width */
     }
 }
 
-/* this is so that arrows dont overlap with sponsors logos*/
-/* this bug is in original website too, if window is shrunk, arrows overlap with sponsors logos*/
+/* this is so that arrows dont overlap with sponsors logos */
+/* this bug is in original website too, if window is shrunk, arrows overlap with sponsors logos */
 
 @media (max-width: 1250px) {
     .arrows-container {
         display: none;
     }
 }
+
+/* mobile version styles below */
 
 @media (max-width: 750px) {
     .desktop {
