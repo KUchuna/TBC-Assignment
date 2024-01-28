@@ -12,3 +12,8 @@
 ## Deployment 
 
 საიტი გაშვებულია GitHub pages მეშვეობით. ლინკი - https://kuchuna.github.io/tbc/
+- ამისათვის ვკლონავთ რეპოზიტორიას: git clone https://github.com/KUchuna/tbc 
+- გადავდივართ Settings გვერდზე
+- ვირჩევთ ჩამონათვალში Pages
+- Branch მენიუში ვირჩევთ main და ვაჭერთ save
+- რამდენიმე წუთში საიტი იქნება ონლაინ და მოგვეცემა მისი ლინკი.
