@@ -1,3 +1,14 @@
 # TBC-Assignment
 
-##Short description
+## Short description
+
+სიატი არის სრულიად რესპონსიული, მობაილ ვერსიით, შესაბამისი ანიმაციებით და მენიუებით. გამოყენებულია სხვადასხვა layout-ები, მათ შორის flexbox და grid.
+
+## Technologies used
+
+საიტის კოდირებისათვის გამოყენებულია მხოლოდ HTML/CSS/JavaScript ყოველგვარი დამატებითი ბიბლიოთეკებისა და ფრეიმვორკების გარეშე, ისე, როგორც ეს
+ინსტრუქციაში იყო მითითებული.
+
+## Deployment 
+
+საიტი გაშვებულია GitHub pages მეშვეობით. ლინკი - https://kuchuna.github.io/tbc/
