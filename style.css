@@ -73,7 +73,7 @@ stay centered and do not exceed certain width */
     cursor: pointer;
     color: white;
     transition: color 0.3s ease;
-    font-size: 13px;
+    font-size: 0.9rem;
     font-weight: 500;
     line-height: 26px;
 }
@@ -97,23 +97,21 @@ stay centered and do not exceed certain width */
 
 .main-title-container {
     background: url("https://static.wixstatic.com/media/93e8a3_9fa23196ddf6427a9da574e2b31a13d2~mv2.jpg/v1/fill/w_1471,h_352,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/93e8a3_9fa23196ddf6427a9da574e2b31a13d2~mv2.jpg");
-    padding: 96px 140px;
-    font-size: 42px;
+    padding: 96px 0;
     color: white;
     height: 352px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    font-weight: bold;
 }
 
 .main-title-container h5 {
     margin-bottom: 15px;
-    font-size: 42px;
+    font-size: 2.8rem;
 }
 
 .main-title-container h6 {
-    font-size: 34px;
+    font-size: 2.3rem;
 }
 
 .main-description-container {
@@ -123,15 +121,14 @@ stay centered and do not exceed certain width */
 }
 
 .main-description-text {
-    font-size: 27px;
+    font-size: 1.7rem;
     line-height: 1.6em;
-    margin-bottom: 43px;
 }
 
 .main-learn-more {
     color: rgb(0 163 224);
     text-decoration: none;
-    font-size: 20px;
+    font-size: 1.2rem;
     font-weight: bold;
     transition: color 0.3s ease;
 }
@@ -152,7 +149,7 @@ stay centered and do not exceed certain width */
 }
 
 .courses-title {
-    font-size: 23.625px;
+    font-size: 1.5rem;
     margin-bottom: 65px;
 }
 
@@ -175,6 +172,8 @@ stay centered and do not exceed certain width */
 .card-contents-container {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
     padding: 0 22px 28px;
 }
 
@@ -185,13 +184,13 @@ stay centered and do not exceed certain width */
 }
 
 .card-course-title {
-    font-size: 17px;
-    margin-bottom: 28px;
+    font-size: 1.1rem;
+    margin-bottom: 23px;
 }
 
 .card-course-state {
-    margin-bottom: 105px;
-    font-size: 13px;
+    margin-bottom: 90px;
+    font-size:0.9rem;
 }
 
 .card-course-details {
@@ -200,14 +199,15 @@ stay centered and do not exceed certain width */
     color: #00AEEF;
     cursor: pointer;
     width: fit-content;
+    width: -moz-fit-content;
     transition: color 0.3s ease;
 }
 
-.card-details:hover {
+.card-course-details:hover {
     color: rgb(0 128 176)
 }
 
-.card-details img {
+.card-course-details img {
     margin-right: 10px;
 }
 
@@ -226,7 +226,7 @@ stay centered and do not exceed certain width */
 
 .sponsors-title {
     color: white;
-    font-size: 24px;
+    font-size: 1.4rem;
 }
 
 .sponsor-page {
@@ -286,7 +286,7 @@ stay centered and do not exceed certain width */
 .dots-container span {
     padding: 3px;
     cursor: pointer;
-    font-size: 24px;
+    font-size: 1.7rem;
 }
 
 /* end of sponsors styles */
@@ -302,14 +302,14 @@ stay centered and do not exceed certain width */
 .faq-title {
     display: flex;
     justify-content: space-between;
-    font-size: 24px;
+    font-size: 1.5rem;
     margin-bottom: 21px;
     max-width: 900px;
 }
 
 .all-questions {
     color: #00AEF3;
-    font-size: 20px;
+    font-size: 1.2rem;
     font-weight: bold;
     cursor: pointer;
     transition: color 0.3s ease;
@@ -329,7 +329,7 @@ stay centered and do not exceed certain width */
     user-select: none;
     padding-top: 26px;
     padding-bottom: 26px;
-    font-size: 18px;
+    font-size: 1.1rem;
     display: flex;
     align-items: center;
 }
@@ -340,6 +340,7 @@ stay centered and do not exceed certain width */
 
 .answer {
     max-height: 0;
+    font-size: 0.9rem;
     overflow: hidden;
     border-bottom: 1px solid rgb(66, 65, 65);
     transition: max-height 0.2s ease;
@@ -375,7 +376,7 @@ stay centered and do not exceed certain width */
 
 .footer-left-text {
     color: #F4F4F4;
-    font-size: 14px;
+    font-size: 0.9rem;
     line-height: 22px; 
 }
 
@@ -397,7 +398,7 @@ stay centered and do not exceed certain width */
     background-color: #00AEF3;
     cursor: pointer;
     color: #FFF;
-    font-size: 16px;
+    font-size: 1rem;
     font-style: normal;
     line-height: 25.6px;
     padding: 7px 31px;
@@ -518,7 +519,7 @@ stay centered and do not exceed certain width */
         margin-right: 20px;
     }
     .header-list-item {
-        font-size: 24px;
+        font-size: 1.4rem;
         margin-bottom: 50px;
         text-align: right;
         min-width: max-content;
@@ -530,16 +531,16 @@ stay centered and do not exceed certain width */
         padding: 80px 25px 0;
     }
     .main-description-container {
-        padding: 30px 25px;
+        padding: 50px 25px;
     }
     .main-description-text {
-        font-size: 22px;
+        font-size: 1.4rem;
     }
     .main-learn-more {
-        font-size: 25px;
+        font-size: 1.5rem;
     }
     .courses-title {
-        font-size: 35px;
+        font-size: 2rem;
         padding-left: 25px;
         margin-bottom: 30px;
     }
@@ -572,7 +573,7 @@ stay centered and do not exceed certain width */
         height: 430px;
     }
     .sponsors-title {
-        font-size: 20px;
+        font-size: 1.3rem;
     }
     .arrows-container {
         display: none;
