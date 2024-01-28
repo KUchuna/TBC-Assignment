@@ -489,15 +489,15 @@ stay centered and do not exceed certain width */
         right: 0;
         width: 0;
         height: 100vh;
-        background-color: #2B2B2B;
+        background-color: #222121;
         z-index: 200;
-        transition: width 0.3s ease-in-out;
+        transition: width 0.2s ease;
         display: flex;
         justify-content: flex-end;
         padding: 100px 0;
     }
     .nav-active {
-        width: 350px;
+        width: 70%;
     }
     #page-overlay {
         position: absolute;
@@ -506,9 +506,11 @@ stay centered and do not exceed certain width */
         width: 100vw;
         height: 100vh;
         z-index: 100;
+        display: none;
         transition: background 0.5s ease;
     }
     .overlay-active {
+        display: initial;
         background: rgba(0, 0, 0, 0.466);
     }
     .header-list {
